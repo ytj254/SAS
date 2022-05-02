@@ -1,0 +1,12 @@
+data PedCrash.landuse_dummy_R;
+	set pedcrash.landuse_dummy;
+	if developmen = 1 then output;
+run;
+data PedCrash.landuse_dummy_C;
+	set pedcrash.landuse_dummy;
+	if developmen = 2 then output;
+run;
+data PedCrash.landuse_dummy_RC;
+	set pedcrash.landuse_dummy;
+	if developmen = 1 or developmen = 2 then output;
+run;
